@@ -150,6 +150,11 @@ class Network_Sites extends Region {
 
 					break;
 
+				case 'WPLANG':
+
+					add_network_option( $site['blog_id'], $field, $single_value );
+					break;
+
 				default:
 
 					update_option( $field, $single_value );
@@ -243,6 +248,10 @@ class Network_Sites extends Region {
 				foreach( $site_users as $site_user ) {
 					$value[ $site_user->user_login ] = array_shift( $site_user->roles );
 				}
+				break;
+
+			case 'WPLANG':
+				$value = get_network_option( $site['blog_id'], $key );
 				break;
 
 			default:
