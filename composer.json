@@ -21,7 +21,6 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "wp-cli/mustangostang-spyc": "^0.6.3"
     },
     "autoload": {
         "files": [ "dictator.php" ]
